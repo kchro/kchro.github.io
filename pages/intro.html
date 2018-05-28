@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hello World</title>
+  <meta charset="utf-8">
+
+  <title>Hello, World.</title>
+  <meta name="description" content="Hello, World">
+  <meta name="author" content="kchro">
+  <style>
+    .flex {
+      display: flex;
+      width: 100%;
+    }
+
+    .en, .jp {
+      width: 50%;
+      overflow-x: scroll;
+    }
+  </style>
 </head>
+<body>
 
-<xmp theme="united" style="display:block;">
-# Markdown text goes in here
+  <div class="flex">
+    <div class="en">
+    </div>
+    <div class="jp">
+    </div>
+  </div>
 
-## Chapter 1
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua.
-
-## Chapter 2
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
-</xmp>
-
-<script src="../lib/strapdown.js"></script>
+  <script src="../lib/marked.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
 </html>
