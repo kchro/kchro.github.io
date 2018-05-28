@@ -11,5 +11,7 @@ html, body {
   display: flex;
 }
 
-.container {
+.article-card-header {
+  color: rgb(68, 100, 154);
+  text-decoration: none;
 }

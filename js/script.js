@@ -80,7 +80,18 @@ $('.meishi-lang').click(function() {
   renderContent();
 });
 
+$('.lang-toggle').click(function() {
+  lang = (lang == 'en') ? 'jp' : 'en';
+  let toggle = document.querySelector('.lang-toggle');
+  toggle.innerHTML = (lang == 'en') ? '日本語' : 'English';
+  renderMeishi();
+  renderContent();
+});
+
 $(document).ready(function() {
+  let toggle = document.querySelector('.lang-toggle');
+  toggle.innerHTML = '日本語';
+
   let email = document.querySelector('.meishi-email');
   email.innerHTML = data.email+'@'+data.host;
 
