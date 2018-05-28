@@ -1,5 +1,4 @@
-# 「深層学習」第一章
-## Ian Goodfellow, Yoshua Bengio, Aaron Courville (2016)
+# 「深層学習」Goodfellow et al. (2016) 第一章
 
 この間、「Deep Learning」っという本を買ってみました。そして、章一つづつ解釈しようと思っています。実は、[こちらへ](http://www.deeplearningbook.org/)無料で読めます。面白かった点や僕の意見を挙げながら行こうと思っています。できるだけ簡単に説明しようと思っていますので、初心者でも分かりやすいようにしておきます。
 

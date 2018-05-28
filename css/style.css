@@ -7,6 +7,8 @@ and (max-device-width : 480px) {
     height: 300px;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 20px rgb(0, 34, 79);
+    z-index: 1;
   }
 
   .hero .hero-text {
@@ -103,8 +105,32 @@ and (max-device-width : 480px) {
   .meishi .meishi-lang {
     width: 100%;
     padding-right: 20px;
-    text-align: right;
+    text-align: center;
     font-size: 40px;
+  }
+
+  .article-card {
+    padding: 50px 20px;
+    border-bottom: 1px solid rgb(0, 34, 79);
+  }
+
+  .article-card-header {
+    font-size: 40px;
+    padding: 5px 0;
+  }
+
+  .article-card-date {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  .article-card-preview {
+    font-size: 12px;
+  }
+
+  .article-card-readmore {
+    font-size: 12px;
+    width: 100%;
   }
 }
 
@@ -175,6 +201,9 @@ and (min-width : 1224px) {
   .hero {
     height: 400px;
     align-items: flex-end;
+    box-shadow: 0px 0px 20px rgb(0, 34, 79);
+    position: relative;
+    z-index: 2;
   }
 
   .hero .hero-text {
@@ -184,6 +213,140 @@ and (min-width : 1224px) {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     width: auto;
+  }
+
+  .container {
+    padding-left: 300px;
+    padding-right: 300px;
+    position: relative;
+  }
+
+  .meishi {
+    width: 300px;
+    padding-top: 0;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .meishi .meishi-container {
+    position: static;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    border: 0;
+  }
+
+  .meishi .meishi-pic-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .meishi .meishi-pic {
+    background: url('../assets/profile.png') no-repeat center;
+    background-color: white;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: 25px;
+    border: 3px solid black;
+  }
+
+  .meishi .meishi-name {
+    font-size: 30px;
+  }
+
+  .meishi .meishi-email,
+  .meishi .meishi-github,
+  .meishi .meishi-linkedin {
+    font-size: 20px;
+  }
+
+  .meishi .meishi-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 20px;
+  }
+
+  .meishi .meishi-bio {
+    font-size: 18px;
+  }
+
+  .meishi .meishi-info-group {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .meishi .meishi-github {
+    background-image: url('../assets/GitHub-Mark/PNG/GitHub-Mark-64px.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+    padding: 0px;
+    margin: 5px;
+  }
+
+  .meishi .meishi-linkedin {
+    background-image: url('../assets/linkedin_brand_package/LinkedIn [in]/Screen/2-Color/In-2C-66px-R.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+    padding: 0px;
+    margin: 5px;
+  }
+
+  .meishi .meishi-lang {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .article-card {
+    padding: 50px 40px;
+    border-bottom: 1px solid rgb(55, 100, 159);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-card-header {
+    color: rgb(68, 100, 154);
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px 0;
+  }
+
+  .article-card-header:hover {
+    text-decoration: underline;
+  }
+
+  .article-card-date {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .article-card-preview {
+    font-size: 20px;
+  }
+
+  .article-card-readmore {
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
   }
 }
 
