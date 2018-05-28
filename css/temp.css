@@ -1,0 +1,57 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+}
+
+.title-hero {
+  width: 100%;
+  height: 400px;
+  background-image: url('../assets/Vecteezy_0850/Vecteezy-0850-min.png');
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.title-hero-text {
+  color: white;
+  font-size: 30px;
+  margin: 40px;
+}
+
+.title-main {
+  width: 100%;
+  display: flex;
+}
+
+.title-content {
+  width: calc(100% - 250px);
+}
+
+.title-sidebar {
+  width: 250px;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic-target {
+  background: url('../assets/profile.png') no-repeat center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 3px solid black;
+}

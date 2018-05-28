@@ -1,0 +1,15 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.hero {
+  width: 100%;
+  background-image: url('../assets/Vecteezy_0850/Vecteezy-0850-min.png');
+  background-size: cover;
+  display: flex;
+}
+
+.container {
+}

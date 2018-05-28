@@ -1,40 +1,201 @@
-.title-hero {
-  width: 100%;
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+  .hero {
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero .hero-text {
+    font-size: 50px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.50);
+    width: 100%;
+    padding: 10px;
+  }
+
+  .meishi {
+    width: 100%;
+    padding-top: 60%;
+    background-color: rgb(247, 245, 225);
+    position: relative;
+  }
+
+  .meishi .meishi-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .meishi .meishi-pic-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .meishi .meishi-pic {
+    background: url('../assets/profile.png') no-repeat center;
+    background-color: white;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    margin: 50px;
+    border: 3px solid black;
+  }
+
+  .meishi .meishi-name {
+    font-size: 50px;
+  }
+
+  .meishi .meishi-email,
+  .meishi .meishi-github,
+  .meishi .meishi-linkedin {
+    font-size: 30px;
+  }
+
+  .meishi .meishi-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 20px;
+  }
+
+  .meishi .meishi-bio {
+    font-size: 30px;
+  }
+
+  .meishi .meishi-info-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .meishi .meishi-github {
+    background-image: url('../assets/GitHub-Mark/PNG/GitHub-Mark-64px.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 64px;
+    width: 64px;
+    padding: 20px;
+  }
+
+  .meishi .meishi-linkedin {
+    background-image: url('../assets/linkedin_brand_package/LinkedIn [in]/Screen/2-Color/In-2C-66px-R.png');
+    /* background-size: ; */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 66px;
+    width: 66px;
+    padding: 20px;
+  }
+
+  .meishi .meishi-lang {
+    width: 100%;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 40px;
+  }
 }
 
-.title-main {
-  width: 100%;
-  display: flex;
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+  .hero {
+    height: 500px;
+    align-items: flex-end;
+  }
+
+  .hero .hero-text {
+    font-size: 50px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.50);
+    width: 100%;
+    padding: 10px;
+  }
+
 }
 
-.title-content {
-  width: calc(100% - 250px);
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
 }
 
-.title-sidebar {
-  width: 250px;
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+  /* .hero {
+    height: 400px;
+    align-items: flex-end;
+  } */
 }
 
-.profile {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+  /* .hero {
+    height: 400px;
+    align-items: flex-end;
+  } */
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+  /* .hero {
+    height: 400px;
+    align-items: flex-end;
+  } */
 }
 
-.profile-pic-target {
-  background: url('../assets/profile.png') no-repeat center;
-  background-size: contain;
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  border: 1px solid black;
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+  .hero {
+    height: 400px;
+    align-items: flex-end;
+  }
+
+  .hero .hero-text {
+    padding: 15px 15px 15px 30px;
+    margin: 15px 0;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }

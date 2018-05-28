@@ -1,3 +1,15 @@
+let lang = 'en';
+const data = {
+  name: 'kchro',
+  jp_name: 'ケイクロ',
+  email: 'nlp.kchro',
+  host: 'gmail.com',
+  linkedin: 'jeff-hara-670784104',
+  bio: '../archive/2018/05/052818_bio.md',
+  jp_bio: '../archive/2018/05/052818_bio_jp.md',
+  github: 'kchro'
+}
+
 function readTextFile(file, callback) {
   let rawFile = new XMLHttpRequest();
   rawFile.open("GET", file, false);
@@ -11,29 +23,35 @@ function readTextFile(file, callback) {
   rawFile.send(null);
 }
 
+function renderMeishi() {
+  let name = document.querySelector('.meishi-name');
+  name.innerHTML = (lang === 'en') ? data.name : data.jp_name;
+
+  let bio = document.querySelector('.meishi-bio');
+  let bio_file = (lang === 'en') ? data.bio : data.jp_bio;
+
+  readTextFile(bio_file, function(responseText) {
+    bio.innerHTML = marked(responseText);
+  });
+
+  let lang_toggle = document.querySelector('.meishi-lang');
+  lang_toggle.innerHTML = (lang === 'en') ? '日本語' : 'English';
+}
+
+$('.meishi-lang').click(function() {
+  lang = (lang == 'en') ? 'jp' : 'en';
+  renderMeishi();
+});
+
 $(document).ready(function() {
-  const data = {
-    email: 'nlp.kchro',
-    host: 'gmail.com',
-    linkedin: 'jeff-hara-670784104',
-    bio: 'sample text',
-    github: 'kchro'
-  }
-
-  let en = document.querySelector('.en');
-  readTextFile('../archive/2018/05/052518_intro.md', function(responseText) {
-    en.innerHTML = marked(responseText);
-  });
-
-  let jp = document.querySelector('.jp');
-  readTextFile('../archive/2018/05/052518_intro_jp.md', function(responseText) {
-    jp.innerHTML = marked(responseText);
-  });
-
-  let email = document.querySelector('.profile-email');
+  let email = document.querySelector('.meishi-email');
   email.innerHTML = data.email+'@'+data.host;
-  let github = document.querySelector('.profile-github');
-  github.innerHTML = '<a href="https://github.com/'+data.github+'">GitHub profile</a>';
-  let linkedin = document.querySelector('.profile-linkedin');
-  linkedin.innerHTML = '<a href="www.linkedin.com/in/'+data.linkedin+'">LinkedIn profile</a>';
+
+  let github = document.querySelector('.meishi-github');
+  github.href = 'https://github.com/'+data.github;
+
+  let linkedin = document.querySelector('.meishi-linkedin');
+  linkedin.href = 'http://www.linkedin.com/in/'+data.linkedin;
+
+  renderMeishi();
 });
