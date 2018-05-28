@@ -1,10 +1,14 @@
 # 「深層学習」Goodfellow et al. (2016) 第一章
 
-この間、「Deep Learning」っという本を買ってみました。そして、章一つづつ解釈しようと思っています。実は、[こちらへ](http://www.deeplearningbook.org/)無料で読めます。面白かった点や僕の意見を挙げながら行こうと思っています。できるだけ簡単に説明しようと思っていますので、初心者でも分かりやすいようにしておきます。
+この間、「Deep Learning」っという本を買ってみました。そして、章一つづつ解釈しようと思っています。実は、[こちらへ](http://www.deeplearningbook.org/)無料で読めます。面白かった点や僕の意見を挙げながらいこうと思っています。できるだけ簡単に説明しようと思っていますので、初心者でも理解できるようにしたいです。
 
-実は、人工知能は結構古い技術です。この本によると、最初の深層学習システムは４０年代に開発されました。最初これ聞いた時、すごく驚きました。スタンフォードでMcClelland先生の授業を受けましたので、そのお年寄りの博士が２０〜３０年前にどれだけ深層学習に影響させたかを分かったら、とても感動しました。
+実は、人工知能は結構古い技術です。この本によると、最初の深層学習システムは４０年代に開発されました。初めて聞いた時、すごく驚きました。スタンフォードで[McClelland先生](https://en.wikipedia.org/wiki/James_McClelland_(psychologist))っていう博士の授業を受けましたので、McClelland先生が２０〜３０年前から深層学習を使って心理学の研究してきました。しかし、他の研究者達がニューラルネットワークの価値を認めてくれなかったです。パソコンが遅すぎて、データも足りなかったため深層学習が実行不可能でした。ニューラルネットワークはよく脳のモデルと思われていますが、この本もそこまでは言いません。
 
-古い技術でしたら、なぜ今更流行ってきましたか？アルゴリズムを開発しましたが、データが足りなかった上、その時代のパソコンが遅すぎて実行可能ではなかったです。
+> Today, neuroscience is regarded as an important source of inspiration for deep learning researchers, but *it is no longer the predominant guide for the field*. The main reason for the diminished role of neuroscience in deep learning research today is that *we simply do not have enough information about the brain* to use it as a guide. (pg 14-15)
+
+つまり、脳のことがまだ理解できていないから、近代のニューラルネットワークの開発は神経科学とほぼ関係ありません。
+
+毎年、パソコンの処理速度がどんどん高くなり、深層学習がやっと成功しています。人工知能が流行っていることでワクワクしませんか？
 
 このチャプターには深層学習のバズワードがいろいろ書いてありますが、おそらく後でもっと詳しく説明してくれるから、とりあえず深層学習は（この本によると）一体どういうことなのかを説明したいと思います。
 

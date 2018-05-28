@@ -52,5 +52,19 @@
   <script src="js/script.js"></script>
   <script src="js/fileloader_helper.js"></script>
   <script src="js/fileloader.js"></script>
+  <script>
+    function renderContent() {
+      const filenames = file_data['filenames'];
+      const content = document.querySelector('.title-content');
+      $(content).empty();
+      for (let i = 0; i < Math.min(5, filenames.length); i++) {
+        content.appendChild(renderArticleCard(filenames[i]));
+      }
+    }
+
+    $(document).ready(function() {
+      renderContent();
+    });
+  </script>
 </body>
 </html>

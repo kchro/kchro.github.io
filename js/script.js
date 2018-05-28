@@ -5,8 +5,8 @@ const data = {
   email: 'nlp.kchro',
   host: 'gmail.com',
   linkedin: 'jeff-hara-670784104',
-  bio: '../archive/2018/05/052818_bio.md',
-  jp_bio: '../archive/2018/05/052818_bio_jp.md',
+  bio: '/archive/2018/05/052818_bio.md',
+  jp_bio: '/archive/2018/05/052818_bio_jp.md',
   github: 'kchro'
 }
 

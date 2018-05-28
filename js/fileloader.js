@@ -11,6 +11,32 @@ function getDate(m, d, y) {
   }
 }
 
+function renderArticle(filename) {
+  const month = parseInt(filename.slice(0, 2));
+  const date = parseInt(filename.slice(2, 4));
+  const year = parseInt('20'+filename.slice(4, 6));
+
+  const date_mdy = getDate(month, date, year);
+  const file_obj = (lang === 'en') ? file_data[filename+'.md'] : file_data[filename+'_jp.md'];
+  const article = renderObject({
+    element: 'div',
+    className: 'article',
+    children: [
+      {
+        element: 'div',
+        className: 'article-date',
+        innerHTML: date_mdy
+      },
+      {
+        element: 'div',
+        className: 'article-body'
+      }
+    ]
+  });
+
+  return article;
+}
+
 function renderArticleCard(filename) {
   const month = parseInt(filename.slice(0, 2));
   const date = parseInt(filename.slice(2, 4));
@@ -45,18 +71,6 @@ function renderArticleCard(filename) {
       }
     ]
   });
+
   return articleCard;
 }
-
-function renderContent() {
-  const filenames = file_data['filenames'];
-  const content = document.querySelector('.title-content');
-  $(content).empty();
-  for (let i = 0; i < Math.min(5, filenames.length); i++) {
-    content.appendChild(renderArticleCard(filenames[i]));
-  }
-}
-
-$(document).ready(function() {
-  renderContent();
-});
