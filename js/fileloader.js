@@ -51,7 +51,7 @@ function renderArticleCard(filename) {
       {
         element: 'a',
         className: 'article-card-header',
-        href: '../pages/deeplearningbook/chapter1.html',
+        href: file_obj.html,
         innerHTML: file_obj.header
       },
       {

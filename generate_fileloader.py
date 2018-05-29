@@ -1,6 +1,17 @@
 import json
 import os
 
+def recurse(dir, key):
+    for filename in os.listdir(dir):
+        if os.path.isdir(os.path.join(dir, filename)):
+            match = recurse(os.path.join(dir, filename), key)
+            if match:
+                return match
+        else:
+            if filename == '%s.html' % key:
+                return os.path.join(dir, filename)
+    return False
+
 if __name__ == '__main__':
     dirname = 'archive'
     filenames = []
@@ -15,6 +26,8 @@ if __name__ == '__main__':
                 continue
 
             dirname_year_month = os.path.join(dirname_year, month)
+
+            # for each file
             for filename in os.listdir(dirname_year_month):
                 if filename.startswith('.'):
                     continue
@@ -26,6 +39,7 @@ if __name__ == '__main__':
                 # store metadata about each file
                 filepath = os.path.join(dirname_year_month, filename)
 
+                # store the first 250 characters of file (preview)
                 with open(filepath, 'r') as f:
                     header = f.readline()
                     if header[0] != '#':
@@ -38,6 +52,12 @@ if __name__ == '__main__':
                         'header': header[1:].lstrip(),
                         'preview': preview
                     }
+
+                # store the link to the html page
+                key = filename[7:].replace('.md', '').replace('_jp', '')
+                html_page = recurse('pages', key)
+                if html_page:
+                    data[filename]['html'] = '/'+html_page
 
     data['filenames'] = sorted(filenames, reverse=True)
 
