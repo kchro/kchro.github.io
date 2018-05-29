@@ -348,7 +348,7 @@ and (min-width : 1224px) {
   }
 
   .article-img {
-    width: 80%;
+    width: 100%;
   }
 
   .article-card {
